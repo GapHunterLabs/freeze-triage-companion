@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- The rating prompt opens the plugin's own Marketplace reviews page instead of the vendor page.
+
 ## [0.1.0]
 
 ### Added
