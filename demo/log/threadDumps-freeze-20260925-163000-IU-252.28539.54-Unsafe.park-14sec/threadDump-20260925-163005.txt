@@ -1,0 +1,24 @@
+"AWT-EventQueue-0" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+	at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at com.intellij.openapi.application.impl.ReadMostlyRWLock.writeLock(ReadMostlyRWLock.java:200)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.getWritePermit(AnyThreadWriteThreadingSupport.kt:500)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runWriteAction(AnyThreadWriteThreadingSupport.kt:600)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runWriteAction(ApplicationImpl.java:900)
+	at com.intellij.openapi.command.WriteCommandAction.run(WriteCommandAction.java:10)
+	at com.intellij.openapi.editor.actionSystem.TypedAction.actionPerformed(TypedAction.java:120)
+	at java.desktop@21.0.8/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+
+"ApplicationImpl pooled thread 3" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+	at java.base@21.0.8/java.lang.ProcessImpl.waitForSingleObject(Native Method)
+	at java.base@21.0.8/java.lang.ProcessImpl.waitFor(ProcessImpl.java:634)
+	at com.intellij.execution.process.CapturingProcessHandler.runProcess(CapturingProcessHandler.java:50)
+	at com.intellij.packaging.impl.PackageFileWorker.packFile(PackageFileWorker.java:120)
+	at com.intellij.openapi.application.impl.AnyThreadWriteThreadingSupport.runReadAction(AnyThreadWriteThreadingSupport.kt:310)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:800)
+	at com.intellij.openapi.application.ReadAction.run(ReadAction.java:20)
+	at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+
+---------- Coroutine dump (stripped) ----------

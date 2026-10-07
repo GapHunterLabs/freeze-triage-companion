@@ -1,0 +1,12 @@
+"AWT-EventQueue-0" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: WAITING
+	at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:369)
+	at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1752)
+	at java.desktop@21.0.8/java.awt.EventQueue.getNextEvent(EventQueue.java:561)
+	at com.intellij.ide.IdeEventQueue.getNextEvent(IdeEventQueue.kt:454)
+	at java.desktop@21.0.8/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:194)
+	at java.desktop@21.0.8/java.awt.Dialog.show(Dialog.java:1051)
+	at com.intellij.openapi.ui.DialogWrapper.show(DialogWrapper.java:1800)
+
+---------- Coroutine dump (stripped) ----------

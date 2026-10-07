@@ -1,0 +1,22 @@
+"AWT-EventQueue-0" prio=0 tid=0x0 nid=0x0 runnable
+     java.lang.Thread.State: RUNNABLE
+	at java.base@21.0.8/sun.nio.fs.WindowsNativeDispatcher.CreateFile0(Native Method)
+	at java.base@21.0.8/sun.nio.fs.WindowsNativeDispatcher.CreateFile(WindowsNativeDispatcher.java:58)
+	at java.base@21.0.8/sun.nio.fs.WindowsChannelFactory.open(WindowsChannelFactory.java:308)
+	at java.base@21.0.8/sun.nio.fs.WindowsChannelFactory.newFileChannel(WindowsChannelFactory.java:169)
+	at java.base@21.0.8/java.nio.file.Files.readAllBytes(Files.java:3299)
+	at com.example.slowplugin.ConfigLoader.load(ConfigLoader.kt:42)
+	at com.example.slowplugin.RefreshAction.actionPerformed(RefreshAction.kt:17)
+	at com.intellij.openapi.actionSystem.ex.ActionUtil.performAction(ActionUtil.kt:200)
+	at com.intellij.openapi.actionSystem.impl.ActionMenuItem.performAction(ActionMenuItem.kt:160)
+	at java.desktop@21.0.8/java.awt.EventQueue.dispatchEvent(EventQueue.java:723)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.kt:500)
+	at java.desktop@21.0.8/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop@21.0.8/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+
+"Common-Cleaner" prio=0 tid=0x0 nid=0x0 waiting on condition
+     java.lang.Thread.State: TIMED_WAITING
+	at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+	at java.base@21.0.8/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+
+---------- Coroutine dump (stripped) ----------

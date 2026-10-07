@@ -1,0 +1,40 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>dev.gaphunter.freezetriagecompanion</id>
+    <name>Freeze Triage Companion</name>
+    <vendor>Gap Hunter Labs</vendor>
+    <description><![CDATA[
+        <p>Lists every UI freeze your IDE recorded, newest first, with what blocked the UI and where: file I/O,
+        an external process, a network call, a <code>runBlocking</code>, a lock held by another thread, class
+        loading, an index lookup and more. When the EDT waits for the read/write lock, it names the thread
+        holding it and what that thread was doing.</p>
+        <p>For each freeze: copy a Markdown report ready for an issue (title in the form JetBrains uses for freeze
+        tickets, duration, build, trimmed stacks), search YouTrack for tickets about the same method before filing
+        a duplicate, open the thread dump, or show the folder. Freezes from other installed versions of the same
+        IDE are listed too.</p>
+        <p>Covers freezes in the platform itself, not only those caused by plugins. When a user-installed plugin
+        is in the blocking stack, it is named.</p>
+        <p>Reads the thread dumps the IDE already writes to its log folder, in a background task. Nothing is sent
+        anywhere: the YouTrack search opens in your browser only when you click it. Free. No license nags, no
+        telemetry.</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Freeze Triage Companion" displayType="BALLOON"/>
+        <toolWindow id="Freeze Triage"
+                    anchor="bottom"
+                    icon="/icons/toolWindow.svg"
+                    factoryClass="dev.gaphunter.freezetriagecompanion.ui.FreezeTriageToolWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <action id="FreezeTriageCompanion.Show"
+                class="dev.gaphunter.freezetriagecompanion.ui.ShowFreezeTriageAction"
+                text="Freeze Triage"
+                description="List the UI freezes this IDE recorded, with what blocked the UI and where">
+            <add-to-group group-id="HelpDiagnosticTools" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
