@@ -3,6 +3,13 @@
 Lists every UI freeze your IDE recorded, with what blocked the UI and where, and turns each one into a report ready
 for an issue, after a search for tickets that already describe it.
 
+![Freeze Triage Companion: see what froze your IDE, and report it once](docs/media/hero.gif)
+
+Each feature on its own:
+[Every freeze, classified](docs/media/01-freeze-history.gif) ·
+[Lock waits explained](docs/media/02-lock-holder.gif) ·
+[A report, ready to paste](docs/media/03-copy-report.gif)
+
 ## Why it exists
 
 When the UI freezes for more than a few seconds, the IDE writes thread dumps to its log folder
