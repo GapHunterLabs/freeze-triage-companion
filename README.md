@@ -78,8 +78,8 @@ names. See [PRIVACY.md](PRIVACY.md).
 
 ## Enterprise / Team Licensing
 
-Need enterprise features, custom rules, or team licensing? Contact us at
-**gaphunterlabs@gmail.com**.
+Need enterprise features, custom rules, or team licensing? Write to me at
+**contact@gaphunterlabs.com**.
 
 ## Development
 
